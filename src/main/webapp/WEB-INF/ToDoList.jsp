@@ -14,21 +14,31 @@
 	<form action="AddChore" method="post">
 	<table border=1>
 	<c:forEach items="${chores}" var="chore" varStatus="status">
+	<c:if test="${!chore.complete }">
 	<tr>
-		<td><c:if test="${!chore.complete }"> ${chore.chore} </c:if>
-			<c:if test="${chore.complete }" > <strike> ${chore.chore }</strike> </c:if>
-		</td>
+		<td>${chore.chore }</td>
 		<td>${chore.date}</td>
 		<td>
-			<c:if test="${!chore.complete}" >
 			<a href="RemoveChore?index=${status.index}"><img src="images/delete.png"></img></a>
-			</c:if>
 		</td>
 	</tr>
+	</c:if>
 	</c:forEach>
 	<tr><td><input type="text" name="newChore" /></td>
 		<td><input type="submit" name="submit" value="Add" /></td></tr>
 	</table>
+	<h3>Completed Tasks</h3>
+	<table border = 1>
+	<c:forEach items="${chores }" var="chore" varStatus="status">
+		<c:if test="${chore.complete }">
+			<tr>
+				<td>${chore.chore}</td>
+				<td>${chore.date}</td>
+			</tr>
+		</c:if>
+	</c:forEach>
+	</table>
+	
 	</form>
 </body>
 </html>

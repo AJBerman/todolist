@@ -1,3 +1,19 @@
 .*
 target/
 !.gitignore
+
+# OS generated files #
+######################
+*.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+
+# Eclipse Projects #
+#####################
+/target/
+/test-output/
+
+/.project
+/.classpath
+/.settings/
