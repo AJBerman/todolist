@@ -21,7 +21,7 @@
 		<td>${chore.date}</td>
 		<td>
 			<c:if test="${!chore.complete}" >
-			<a href="RemoveChore?index=${status.index}">X</a>
+			<a href="RemoveChore?index=${status.index}"><img src="images/delete.png"></img></a>
 			</c:if>
 		</td>
 	</tr>
