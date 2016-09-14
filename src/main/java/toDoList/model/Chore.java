@@ -10,9 +10,10 @@ public class Chore {
 	private boolean complete;
 	
 	
-	public Chore(String chore){
+	public Chore(String chore, String date){
 		this.chore = chore;
-		this.date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
+		//this.date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
+		this.date=date;
 		complete = false;
 	}
 

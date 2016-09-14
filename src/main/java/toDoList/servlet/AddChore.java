@@ -1,6 +1,8 @@
 package toDoList.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -32,7 +34,7 @@ public class AddChore extends HttpServlet {
 			return;
 		}
 		//chores.add(new Chore(newItem));
-		chores.add(0, new Chore(newItem));
+		chores.add(0, new Chore(newItem,new SimpleDateFormat("MM/dd/yyyy").format(new Date())));
 		
 		response.sendRedirect("ToDoList");
 	}

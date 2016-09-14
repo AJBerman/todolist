@@ -1,6 +1,8 @@
 package toDoList.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -33,7 +35,7 @@ public class RemoveChore extends HttpServlet {
 		Chore temp = chores.get(index);
 		chores.remove(index);
 		chores.add(temp);
-		
+		getServletContext().setAttribute("dc",new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
 		response.sendRedirect("ToDoList");
 	}
 

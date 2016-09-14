@@ -29,9 +29,9 @@ public class ToDoList extends HttpServlet {
 		super.init(config);
 		
 		List<Chore> chores = new ArrayList<Chore>();
-		chores.add(new Chore("Take out trash"));
-		chores.add(new Chore("Buy milk"));
-		chores.add(new Chore("Watch \"Suicide Squad \""));
+		chores.add(new Chore("Take out trash","9/1/2016"));
+		chores.add(new Chore("Buy milk","8/22/2016"));
+		chores.add(new Chore("Watch \"Suicide Squad \"","9/11/2016"));
 			
 		getServletContext().setAttribute("chores", chores);
 	}
