@@ -1,0 +1,25 @@
+/* https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/
+   https://css-tricks.com/snippets/css/comments-in-css/
+   http://www.w3schools.com/css/css_table.asp
+   http://images.all-free-download.com/images/graphiclarge/luxurious_black_damask_patterns_vector_551028.jpg
+   http://www.tagindex.net/css/table/background_image.html
+   http://stackoverflow.com/questions/19064592/how-do-i-add-hover-on-the-nth-child-of-an-element-using-css2-selectors
+*/
+
+table {
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+td {
+	border-bottom: 2px dotted red;
+	padding: 5px
+}
+
+tr:nth-child(odd) {
+	background-color: #E6E6E6;
+}
+
+tr:hover {
+	background-color: #FFB3B3 !important;
+}
