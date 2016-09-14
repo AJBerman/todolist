@@ -30,11 +30,17 @@
 	</table>
 	<h3>Completed Tasks</h3>
 	<table border = 1>
+	<tr>
+		<th>Task</th>
+		<th>Date Assigned</th>
+		<th>Date Completed</th>
+	</tr>
 	<c:forEach items="${chores }" var="chore" varStatus="status">
 		<c:if test="${chore.complete }">
 			<tr>
 				<td>${chore.chore}</td>
 				<td>${chore.date}</td>
+				<td>${dc }</td>
 			</tr>
 		</c:if>
 	</c:forEach>
